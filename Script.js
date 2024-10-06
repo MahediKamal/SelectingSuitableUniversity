@@ -44,15 +44,11 @@ async function fetchSheetData() {
       // Your custom filtering conditions here
       // Example structure:
       //  return row[0] === params[0] && row[1] === params[1] && ... ;
-      console.log(params);
-      return row[2] === params[0]
-      // Sample placeholder for filtering logic:
-      return params.every((param, index) => {
-        // For each parameter:
-        //  - If `param` is empty, ignore it (wildcard)
-        //  - If `param` is not empty, check if it matches the corresponding cell in `row`
-        return param === '' || row[index] === param;
-      });
+      if(matchRequirements(row, params)){
+        return true;
+      }else{
+        return false;
+      }
     });
   
     // 3. Display the filtered data in the table
@@ -102,6 +98,33 @@ function displayRows(rows) {
 // Show the specified row on button click
 function showRow() {
   showMatchingRows()
+}
+
+// Custom function to match the requirements
+function matchRequirements(row, params){
+  if(row[2] != params[0]){ // state
+    return false;
+  }
+  if(row[3] != params[1]){ // program {PhD, MS}
+    return false;
+  }
+  if(row[4] > params[2]){ // cgpa
+    return false;
+  }
+  if(row[5] > params[3]){ // grev
+    return false;
+  }
+  if (row[6] > params[4]){ // grea
+    return false;
+  }
+  if(row[7] > params[5]){ // greq
+    return false;
+  }
+  if(row[8] > params[6] & row[9] > params[7]){ // ielts TOEFL
+    return false;
+  }
+
+  return true;
 }
 
 // Fetch data on page load but don’t display it yet

@@ -8,23 +8,33 @@
 </head>
 <body>
 
-<h2>Data from Google Sheets</h2>
+<h1 id="loading-message">Loading data, please wait...</h1>
+<h2>Give your profile</h2>
 <!-- Loading message -->
-<div id="loading-message">Loading data, please wait...</div>
 
 <!-- Input fields for 8 parameters -->
 <div id="input-container">
-    <label>Parameter 1: <input type="text" id="state"></label>
-    <label>Parameter 2: <input type="text" id="program"></label>
-    <label>Parameter 3: <input type="text" id="cgpa"></label>
-    <label>Parameter 4: <input type="text" id="grev"></label>
-    <label>Parameter 5: <input type="text" id="grea"></label>
-    <label>Parameter 6: <input type="text" id="greq"></label>
-    <label>Parameter 7: <input type="text" id="ielts"></label>
-    <label>Parameter 8: <input type="text" id="toefl"></label>
+    <label>State: 
+        <select id="state">
+            <option value="TEXAS">TEXAS</option>
+            <option value="CALIFORNIA">CALIFORNIA</option>
+        </select>
+    </label>
+    <label>program:
+      <select id="program">
+        <option value="PhD">PhD</option>
+        <option value="MS">MS</option>
+    </select>
+    </label>
+    <label>CGPA: <input type="text" id="cgpa"></label>
+    <label>GRE Verbal: <input type="text" id="grev"></label>
+    <label>GRE AWA: <input type="text" id="grea"></label>
+    <label>GRE Quant: <input type="text" id="greq"></label>
+    <label>IELTS: <input type="text" id="ielts"></label>
+    <label>TOEFL: <input type="text" id="toefl"></label>
   </div>
 
-<button onclick="showRow()">Show Row</button>
+<button onclick="showRow()">Get University Suggestions</button>
 
 <table id="data-table">
   <thead>
