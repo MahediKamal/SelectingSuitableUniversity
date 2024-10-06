@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets Data</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Data from Google Sheets</h2>
+<!-- Loading message -->
+<div id="loading-message">Loading data, please wait...</div>
+
+<!-- Input fields for 8 parameters -->
+<div id="input-container">
+    <label>Parameter 1: <input type="text" id="state"></label>
+    <label>Parameter 2: <input type="text" id="program"></label>
+    <label>Parameter 3: <input type="text" id="cgpa"></label>
+    <label>Parameter 4: <input type="text" id="grev"></label>
+    <label>Parameter 5: <input type="text" id="grea"></label>
+    <label>Parameter 6: <input type="text" id="greq"></label>
+    <label>Parameter 7: <input type="text" id="ielts"></label>
+    <label>Parameter 8: <input type="text" id="toefl"></label>
+  </div>
+
+<button onclick="showRow()">Show Row</button>
+
+<table id="data-table">
+  <thead>
+    <tr id="table-header"></tr>
+  </thead>
+  <tbody id="table-body"></tbody>
+</table>
+
+<!-- Link to the external JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
