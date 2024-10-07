@@ -17,7 +17,6 @@ async function fetchSheetData() {
       } else {
         console.log("Data fetched successfully. Click the button to display a specific row.");
         document.getElementById('loading-message').style.display = 'none';  // Hide loading message
-        document.getElementById('show-row-button').disabled = false;  // Enable the button
       }
     } catch (error) {
       console.error('Error fetching data:', error);

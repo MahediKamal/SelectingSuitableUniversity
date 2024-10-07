@@ -9,4 +9,37 @@ table {
   th {
     background-color: #f2f2f2;
   }
+
+body{
+  padding: 0;
+  margin: 0;
+}
   
+
+.page{
+  background-color: rgb(225, 227, 209);
+  display: flex;
+}
+
+  .input-section-container{
+    background-color: rgb(135, 126, 126);
+    color: rgb(26, 6, 6);
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 5px;
+    width: 20%;
+    height: 700px;
+  }
+  /* Specific size styling for labels */
+.input-box {
+  display: inline-block;     /* or block, depending on layout */
+  width: 90%;              /*Set the width to your preference*/
+  text-align: left;          /* Optional, aligns text to the left */
+  margin-bottom: 10px;
+}
+
+.search-button{
+  align-items: right;
+  align-self: right;
+  display: flex;
+}

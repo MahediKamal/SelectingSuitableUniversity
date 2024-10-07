@@ -3,45 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Sheets Data</title>
+  <title>Select Suitable University</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
 <h1 id="loading-message">Loading data, please wait...</h1>
-<h2>Give your profile</h2>
+<!-- //<h2>Give your profile</h2> -->
 <!-- Loading message -->
 
-<!-- Input fields for 8 parameters -->
-<div id="input-container">
-    <label>State: 
-        <select id="state">
+<div class="page">
+  <!-- Input fields for 8 parameters -->
+  <div id="input-container" class="input-section-container">
+    <label>State:</br>
+        <select id="state" class = "input-box">
             <option value="TEXAS">TEXAS</option>
             <option value="CALIFORNIA">CALIFORNIA</option>
         </select>
-    </label>
-    <label>program:
-      <select id="program">
+    </label></br>
+    <label>program:</br>
+      <select id="program" class = "input-box">
         <option value="PhD">PhD</option>
         <option value="MS">MS</option>
     </select>
-    </label>
-    <label>CGPA: <input type="text" id="cgpa"></label>
-    <label>GRE Verbal: <input type="text" id="grev"></label>
-    <label>GRE AWA: <input type="text" id="grea"></label>
-    <label>GRE Quant: <input type="text" id="greq"></label>
-    <label>IELTS: <input type="text" id="ielts"></label>
-    <label>TOEFL: <input type="text" id="toefl"></label>
+    </label></br>
+    <label>CGPA: </br> <input type="text" id="cgpa" class = "input-box"></label></br>
+    <label>GRE Verbal: </br> <input type="text" id="grev" class = "input-box"></label></br>
+    <label>GRE AWA: </br> <input type="text" id="grea" class = "input-box"></label></br>
+    <label>GRE Quant: </br> <input type="text" id="greq" class = "input-box"></label></br>
+    <label>IELTS: </br> <input type="text" id="ielts" class = "input-box"></label></br>
+    <label>TOEFL: </br> <input type="text" id="toefl" class = "input-box"></label></br>
+
+    <button onclick="showRow()" class="search-button">Get University Suggestions</button>
   </div>
 
-<button onclick="showRow()">Get University Suggestions</button>
-
-<table id="data-table">
-  <thead>
-    <tr id="table-header"></tr>
-  </thead>
-  <tbody id="table-body"></tbody>
-</table>
+  <!-- output container -->
+  <div>
+    <table id="data-table">
+      <thead>
+        <tr id="table-header"></tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+</div>
 
 <!-- Link to the external JavaScript file -->
 <script src="./Script.js"></script>
